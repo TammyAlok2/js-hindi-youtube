@@ -1,29 +1,30 @@
-"use strict"; // treat all JS code as newer version
+"use strict"
+console.log("hello this working ")
+// code readibility shoud be high 
 
-// alert( 3 + 3) // we are using nodejs, not browser
+let name  = "alok";
+let age = 18 ;
+let isLoggedIn = false;
 
-console.log(3 
-    +
-     3) // code readability should be high
+// types of datatypes :
 
-console.log("Hitesh")
+// Primitive Data types : 
+   // number 
+   // Bigint 
+   // string
+   // Boolean 
+   // null (it comes under the object  )
+   // undefined  // when we  declare a variable but not assign like  let name ;
+   // symbol : uniques 
 
-
-let name = "hitesh"
-let age = 18
-let isLoggedIn = false
-let state;
-
-// number => 2 to power 53
-// bigint
-// string => ""
-// boolean => true/false
-// null => standalone value
-// undefined => 
-// symbol => unique
+   // non Primitve data types 
+     // Object : 
 
 
-// object
+     let surname ;
+     console.log(typeof(surname)); // return undefined 
+     let ans = null;
+     console.log(typeof(ans)); // return object 
 
-console.log(typeof undefined); // undefined
-console.log(typeof null); // object
+     console.log(typeof(null)) // return object 
+     console.log(typeof(undefined)) // return undefined 
