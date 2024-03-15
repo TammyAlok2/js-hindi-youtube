@@ -1,39 +1,37 @@
-// array
+const myArray = [1,2,3,4,5];
+console.log(myArray)
 
-const myArr = [0, 1, 2, 3, 4, 5]
-const myHeors = ["shaktiman", "naagraj"]
+const array = new Array(1,2,3,4,5);
+console.log(array)
 
-const myArr2 = new Array(1, 2, 3, 4)
-// console.log(myArr[1]);
+// array makes shallow copy means it takes reference and not make any copy it uses heap 
+const myHeros = ["rimjhim","alok"]
+console.log(myHeros)
 
-// Array methods
+// array methods 
+myArray.push(12,12);
+console.log(myArray)
+myArray.pop()
+myArray.unshift(10) // to push on front of 
+myArray.shift() // removes the fast element of the array 
 
-// myArr.push(6)
-// myArr.push(7)
-// myArr.pop()
+console.log(myArray.includes(10)); // returns true if array contain value otherwise false if array doesn't contain value 
 
-// myArr.unshift(9)
-// myArr.shift()
+console.log(myArray.indexOf(3)); // return the index of value if present other wise -1
 
-// console.log(myArr.includes(9));
-// console.log(myArr.indexOf(3));
+const newArr = myArray.join(); // converted array into string 
 
-// const newArr = myArr.join()
+console.log(newArr)
+console.log(myArray)
 
-// console.log(myArr);
-// console.log( newArr);
+// differnce btw slice and splice
+const rimArray = [10,20,30,40,50]
 
-
-// slice, splice
-
-console.log("A ", myArr);
-
-const myn1 = myArr.slice(1, 3)
-
-console.log(myn1);
-console.log("B ", myArr);
-
-
-const myn2 = myArr.splice(1, 3)
-console.log("C ", myArr);
-console.log(myn2);
+const sliceArray = rimArray.slice(1,3);
+console.log("slice",sliceArray)
+console.log( "original array ",rimArray)
+const spliceArray = rimArray.splice(1,3);
+console.log("splice",spliceArray)
+console.log("original array",rimArray)
+// In slice it does not include the last element and the origanal remain same 
+// In splice it include the last elment and original array changed and original array only contain element left after splice

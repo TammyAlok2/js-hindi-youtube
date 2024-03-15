@@ -1,31 +1,29 @@
-const marvel_heros = ["thor", "Ironman", "spiderman"]
-const dc_heros = ["superman", "flash", "batman"]
+const marvel_heroes = ["thor","IronMan","spiderman"];
+const Dc = ["superman","Batman","flash"];
 
-// marvel_heros.push(dc_heros)
+//marvel_heroes.push(Dc)
+console.log(marvel_heroes) // it takes array as data 
+console.log(marvel_heroes.length) // answer is 4 
+// concat gives new array 
+ const newHero = marvel_heroes.concat(Dc);
+console.log(newHero)
+console.log(newHero.length)//7
 
-// console.log(marvel_heros);
-// console.log(marvel_heros[3][1]);
+const allHero = [...marvel_heroes,...Dc] // using spread operator
+console.log(allHero)
 
-// const allHeros = marvel_heros.concat(dc_heros)
-// console.log(allHeros);
+const another_array = [1,2,3,[4,5,6],7,[6,2,[4,5]]];
+console.log(another_array.length) //6
+const real_another_array = another_array.flat(Infinity) // return all the other array in one 
+console.log(real_another_array)
 
-const all_new_heros = [...marvel_heros, ...dc_heros]
+console.log(Array.isArray("Hitesh")) // return true if right otherwise false here it is false 
+console.log(Array.from("ALok")); // makes array 
 
-// console.log(all_new_heros);
-
-const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
-
-const real_another_array = another_array.flat(Infinity)
-console.log(real_another_array);
-
-
-
-console.log(Array.isArray("Hitesh"))
-console.log(Array.from("Hitesh"))
-console.log(Array.from({name: "hitesh"})) // interesting
+console.log(Array.from({name:"alook"})) // interesting and gives []
 
 let score1 = 100
 let score2 = 200
 let score3 = 300
 
-console.log(Array.of(score1, score2, score3));
+console.log(Array.of(score1,score2,score3)) // makes array 
