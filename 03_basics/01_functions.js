@@ -1,70 +1,60 @@
-
-function sayMyName(){
-    console.log("H");
-    console.log("I");
-    console.log("T");
-    console.log("E");
-    console.log("S");
-    console.log("H");
+function saymyName(){
+    //function definition
+    console.log('H')
+    console.log('I')
+    console.log('T')
+    console.log('E')
+    console.log('S')
 }
-
-// sayMyName()
-
-// function addTwoNumbers(number1, number2){
-
-//     console.log(number1 + number2);
-// }
-
-function addTwoNumbers(number1, number2){
-
-    // let result = number1 + number2
-    // return result
-    return number1 + number2
+// function reference
+//saymyName()
+// we receive parameters and we pass arguments
+function addTwoNumbers(num1,num2){
+    console.log( num1+num2);
 }
-
-const result = addTwoNumbers(3, 5)
-
-// console.log("Result: ", result);
-
-
-function loginUserMessage(username = "sam"){
+let ans = addTwoNumbers(2,3)
+console.log(ans) //undefined
+// default value in function
+function isLoggedIn(username =
+    'Guest'){
     if(!username){
-        console.log("PLease enter a username");
-        return
+        console.log('please enter username')
+        return ;
     }
     return `${username} just logged in`
 }
+//console.log(isLoggedIn('Alok'))
+console.log(isLoggedIn()) // undefined
 
-// console.log(loginUserMessage("hitesh"))
-// console.log(loginUserMessage("hitesh"))
 
-
-function calculateCartPrice(val1, val2, ...num1){
-    return num1
+// rest operator (taking multiple values)... learn difference btw spread and rest 
+function calculateCartPrice(...num1){
+return num1;
 }
+console.log(typeof(calculateCartPrice(100,300,400))) //object
 
-// console.log(calculateCartPrice(200, 400, 500, 2000))
-
-const user = {
-    username: "hitesh",
-    prices: 199
+function calculateCartPrice1(val1,val2,...num2){
+    return num2;
 }
+console.log(calculateCartPrice1(100,200,300)) // ans = 300 
 
-function handleObject(anyobject){
-    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+const user  ={
+    username:"alok",
+    price:200
 }
-
-// handleObject(user)
+function handleObject(anyObject){
+    console.log(`username is ${anyObject.username} and price is ${anyObject.price}`)
+}
+handleObject(user)
 handleObject({
-    username: "sam",
-    price: 399
+    username:"anmol",
+    price:200
 })
 
-const myNewArray = [200, 400, 100, 600]
+const myNewArray = [200,300,400]
+function returnSecondValue(value){
+    console.log(value[1]);
+    return value[1];
 
-function returnSecondValue(getArray){
-    return getArray[1]
 }
-
-// console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200, 400, 500, 1000]));
+returnSecondValue(myNewArray)
