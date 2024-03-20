@@ -1,54 +1,39 @@
 const user = {
-    username: "hitesh",
-    price: 999,
-
-    welcomeMessage: function() {
-        console.log(`${this.username} , welcome to website`);
-        console.log(this);
+    username : "alok tamrakar ",
+    price:"1000",
+    welcomeMessage:function (){
+        console.log(` Hello ${this.username},welcome to the website` )
+       // console.log(this) gives full context
     }
+}
+//user.welcomeMessage()
+//user.username= "alok "
+//user.welcomeMessage()
+//console.log(this) // empty because it is not in node enviroment
+function chai(){
+    let username = "alok"
+  //  console.log(this.username) not possible 
+}
+chai()
+
+const chai1 = function(){
+let username = 'aok'
+//console.log(this.username) // undefined 
+}
+chai1()
+
+const chai2 = ()=>{
+    let username = 'alok kumar'
+    console.log(this)
 
 }
+chai2()
 
-// user.welcomeMessage()
-// user.username = "sam"
-// user.welcomeMessage()
-
-// console.log(this);
-
-// function chai(){
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
-
-// chai()
-
-// const chai = function () {
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
-
-const chai =  () => {
-    let username = "hitesh"
-    console.log(this);
+// arrow function  {} isme wrap karne me return likhna padega must hai nahi to nahi lena padega 
+// explict return  
+const addTwo = (num1,num2)=>{
+    return num1 +num2;
 }
 
-
-// chai()
-
-// const addTwo = (num1, num2) => {
-//     return num1 + num2
-// }
-
-// const addTwo = (num1, num2) =>  num1 + num2
-
-// const addTwo = (num1, num2) => ( num1 + num2 )
-
-const addTwo = (num1, num2) => ({username: "hitesh"})
-
-
-console.log(addTwo(3, 4))
-
-
-// const myArray = [2, 5, 3, 7, 8]
-
-// myArray.forEach()
+// implict return 
+const addThree  = (num1,num2)=> num1+num2;
