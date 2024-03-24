@@ -4,23 +4,21 @@ const myObject = {
     rb: "ruby",
     swift: "swift by apple"
 }
-
-for (const key in myObject) {
-    //console.log(`${key} shortcut is for ${myObject[key]}`);
+// object me (for -in)  yes ; (for-of) no  
+// map me    (for -in)  no  ; (for-of )no 
+// array me (for in ) yes   ; (for-of )yes 
+for(const val in myObject){
+    console.log(val , myObject[val])
+}
+const map = new Map()
+map.set('mi','mumbai')
+map.set('csk','chennai')
+// not works 
+for(const val in map){
+    console.log(val)
 }
 
-const programming = ["js", "rb", "py", "java", "cpp"]
-
-for (const key in programming) {
-    //console.log(programming[key]);
+const programming = ['c','c++'];
+for(const val in programming){
+    console.log(programming[val])
 }
-
-// const map = new Map()
-// map.set('IN', "India")
-// map.set('USA', "United States of America")
-// map.set('Fr', "France")
-// map.set('IN', "India")
-
-// for (const key in map) {
-//     console.log(key);
-// }
